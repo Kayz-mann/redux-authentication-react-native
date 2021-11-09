@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Text, TextInput, TouchableOpacity} from 'react-native';
+import { View, StyleSheet, Text, TextInput, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '../components/Button';
 import { TextField } from '../components/TextField';
@@ -32,7 +32,7 @@ const screens: React.FC = () => {
         // console.log('Recieved User Data' + token)
     }, [user]);
 
-  return <View style={styles.container}>
+  return <KeyboardAvoidingView style={styles.container}>
       <View style={styles.navigation}></View>
       <View style={styles.body}>
           <View style={styles.loginView}>
@@ -47,12 +47,13 @@ const screens: React.FC = () => {
       </View>
       </View>
       <View style={styles.footer}></View>
-  </View>
+  </KeyboardAvoidingView>
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        padding: 10
     },
     navigation: {
         flex: 2,
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
         flex:9,
     },
     loginView: {
-        marginTop: 150,
+        marginTop: 100,
         marginLeft: 20,
         marginRight: 20,
         height: 400,
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#cecece',
         top: 700,
+        height: 100,
     }
 })
 
