@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         flex:9,
     },
     loginView: {
-        marginTop: 200,
+        marginTop: 150,
         marginLeft: 20,
         marginRight: 20,
         height: 400,
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     footer: {
         flex: 1,
         backgroundColor: '#cecece',
+        top: 700,
     }
 })
 
